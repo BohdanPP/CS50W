@@ -1,26 +1,17 @@
 import React from "react";
 import "./App.css";
-import Technologies from "./Technologies";
-
-import Accordion from "./components/Accordion/Accodrdion";
-import { Rating } from "./components/Rating/Rating";
-import Header from "./Header";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import Profile from "./components/Profile";
 
 const App = () => {
-  return (
-    <div className="App">
-      <Header />
-      <Technologies />
-    </div>
-  );
+    return (
+        <div className="app-wrapper">
+            <Header/>
+            <Navbar/>
+            <Profile/>
+        </div>
+    );
 };
-
-type PageTitlePropsType = {
-  title: string;
-};
-
-function PageTitle(props: PageTitlePropsType) {
-  return <h1>{props.title}</h1>;
-}
 
 export default App;
